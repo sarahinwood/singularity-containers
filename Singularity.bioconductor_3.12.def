@@ -1,0 +1,32 @@
+Bootstrap: docker
+From: bioconductor/bioconductor_docker:RELEASE_3_12
+
+%help
+
+    R 4.0.3 with Bioconductor 3.12
+
+%labels
+
+    MAINTAINER "Sarah Inwood (sninwood@gmail.com)"
+    VERSION "Bioconductor 3.12"
+
+%post
+    # install packages from bioconductor
+    Rscript -e "options(Ncpus=8); \
+        BiocManager::install(c( \
+            'adegenet', \
+            'data.table', \
+            'fgsea', \
+            'pcadapt', \
+            'pheatmap', \
+            'qqman', \
+            'S4Vectors', \
+            'tidyverse', \
+            'vcfR', \
+            'viridis'
+            ), \
+        type='source', ask=FALSE)"
+
+%runscript
+
+    exec /usr/local/bin/R "$@"
