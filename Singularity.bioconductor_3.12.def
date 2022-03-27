@@ -15,7 +15,11 @@ From: bioconductor/bioconductor_docker:RELEASE_3_12
     Rscript -e "options(Ncpus=8); \
         BiocManager::install(c( \
             'adegenet', \
+            'BatchJobs', \
+            'clusterProfiler', \
             'data.table', \
+            'DESeq2', \
+            'DEXSeq', \
             'fgsea', \
             'pcadapt', \
             'pheatmap', \
