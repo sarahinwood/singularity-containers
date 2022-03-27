@@ -26,6 +26,7 @@ From: bioconductor/bioconductor_docker:RELEASE_3_12
             'qqman', \
             'S4Vectors', \
             'tidyverse', \
+            'tximport', \
             'vcfR', \
             'viridis'
             ), \
