@@ -16,7 +16,9 @@ From: bioconductor/bioconductor_docker:RELEASE_3_12
         BiocManager::install(c( \
             'adegenet', \
             'BatchJobs', \
+            'Biostrings', \
             'clusterProfiler', \
+            'dada2', \
             'data.table', \
             'DESeq2', \
             'DEXSeq', \
@@ -24,6 +26,7 @@ From: bioconductor/bioconductor_docker:RELEASE_3_12
             'pcadapt', \
             'pheatmap', \
             'qqman', \
+            'ShortRead', \
             'S4Vectors', \
             'tidyverse', \
             'tximport', \
