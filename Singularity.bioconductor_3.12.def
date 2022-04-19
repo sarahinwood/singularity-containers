@@ -25,6 +25,7 @@ From: bioconductor/bioconductor_docker:RELEASE_3_12
             'fgsea', \
             'pcadapt', \
             'pheatmap', \
+            'phyloseq', \
             'qqman', \
             'ShortRead', \
             'S4Vectors', \
