@@ -18,6 +18,5 @@ From: continuumio/miniconda3
 
 %runscript
 
-		conda init
-		source activate viralFlye
-		/viralFlye/viralFlye.py
+	source activate viralFlye
+	/viralFlye/viralFlye.py
