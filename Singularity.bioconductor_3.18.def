@@ -1,27 +1,26 @@
 Bootstrap: docker
-From: bioconductor/bioconductor_docker:RELEASE_3_12
+From: bioconductor/bioconductor_docker:RELEASE_3_18
 
 %help
 
-    R 4.0.3 with Bioconductor 3.12
+    R 4.4.1 with Bioconductor 3.18
 
 %labels
 
     MAINTAINER "Sarah Inwood (sninwood@gmail.com)"
-    VERSION "Bioconductor 3.12"
+    VERSION "Bioconductor 3.18"
 
 %post
     # install packages from bioconductor
     Rscript -e "options(Ncpus=8); \
         BiocManager::install(c( \
-          'adegenet', \
+            'adegenet', \
             'apeglm', \
             'BatchJobs', \
             'Biostrings', \
             'clusterProfiler', \
             'dada2', \
             'data.table', \
-            'DEGreport', \
             'DESeq2', \
             'DEXSeq', \
             'fgsea', \
@@ -42,8 +41,9 @@ From: bioconductor/bioconductor_docker:RELEASE_3_12
             ), \
         type='source', ask=FALSE)"
 
+    # install zoo
     Rscript -e "options(Ncpus=8); \
-        install.packages(c('cowplot', 'dendsort'))"
+        install.packages('zoo')"
 
 %runscript
 
