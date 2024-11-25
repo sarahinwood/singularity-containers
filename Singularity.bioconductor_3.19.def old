@@ -1,14 +1,14 @@
 Bootstrap: docker
-From: bioconductor/bioconductor_docker:RELEASE_3_18
+From: bioconductor/bioconductor_docker:RELEASE_3_19
 
 %help
 
-    R 4.4.1 with Bioconductor 3.18
+    R 4.4.1 with Bioconductor 3.19
 
 %labels
 
     MAINTAINER "Sarah Inwood (sninwood@gmail.com)"
-    VERSION "Bioconductor 3.18"
+    VERSION "Bioconductor 3.19"
 
 %post
     # install packages from bioconductor
